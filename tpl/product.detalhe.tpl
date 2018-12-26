@@ -1,6 +1,6 @@
 <div class="col-md-6">
 	<div class="prod">
-		<img class="marca" src="http://www.blitzbolsas.com.br/img/marca.png" />
+		<img class="marca" src="marca-default" />
 		<img src="foto" id="photMuda" alt="foto" width="100%"/>
 		<span class="prod_title">referencia</span>
 	</div>

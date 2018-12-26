@@ -1,5 +1,5 @@
 	
-	<img class="top_header" src="<?= URL ?>img/hader-produtos.jpg" width="100%"> <br><br>
+	<img class="top_header" src="<?= URL ?>disc/img/hader-produtos.jpg" width="100%"> <br><br>
 
 	<div class="container">
 		<div class="row">

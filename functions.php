@@ -1,17 +1,14 @@
 <?php
-	session_start();
-	header('Content-Type: text/html; charset=UTF-8', true);
-
+	
 	require 'class/crud.php';
 	require 'class/tpl.php';
 	require 'class/products.class.php';
 	require 'class/seo.class.php';
 	require 'class/cart.class.php';
-
-
-
-	// define('URL', 'http://localhost:8080/cliente/blitzbolsas/');
-	define('URL', '/');
+	define( 'http', $_SERVER['REQUEST_SCHEME'] );
+	define( 'domain', $_SERVER['SERVER_NAME'] );
+	
+	define('URL', http . "://" . domain . "/");
 	define('PHONE', '+55 (11) 3481-0400');
 	define('EMAIL', 'contato@blitzbolsas.com.br');
 	define('FACEBOOK', 'https://www.facebook.com/BlitzBolsaseBrindes/');
@@ -33,4 +30,11 @@
 		mail($paraMail, $assunto, $men, $headers);
 	}
 
-?>
+	function t( $ELEMENT ) 
+	{
+		echo "<pre>";
+		var_dump( $ELEMENT );
+		echo "</pre>";
+	}
+
+	

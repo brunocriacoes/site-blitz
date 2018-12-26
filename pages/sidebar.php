@@ -10,9 +10,9 @@
 				</ul>
 			</div>
 
-			<img src="<?= URL ?>img/500x500.jpg" width="100%">
+			<img src="<?= URL ?>disc/img/500x500.jpg" width="100%">
 			<br><br>
-			<img src="<?= URL ?>img/500x1000.jpg" width="100%">
+			<img src="<?= URL ?>disc/img/500x1000.jpg" width="100%">
 			<br><br>
 
 		</div>

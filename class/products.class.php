@@ -19,6 +19,7 @@
 				$resultado[$key]['foto']      = URL.$value;
 				$resultado[$key]['id_prod']   = str_replace([$this->pasta, ".jpg"], '', $value);
 				$resultado[$key]['prod_link']   = URL.$this->url[0].'/'.$this->url[1].'/'.$resultado[$key]['id_prod'];
+				$resultado[$key]['marca-default']   = URL . "disc/img/marca.png";
 				if(file_exists($this->pasta.$resultado[$key]['id_prod'].'.json')){
 					foreach (ler($this->pasta.$resultado[$key]['id_prod'].'.json') as $k => $v) {
 						$resultado[$key][$k] = $v;
@@ -36,7 +37,7 @@
 			$resultado = array();
 			$resultado['foto']    = URL.$url;
 			$resultado['foto_id'] = $this->url[2];
-
+			
 			$existeDescricao = file_exists('product/'.$this->url[1].'/'.$this->url[2].'.json');
 			if($existeDescricao){
 				foreach (ler('product/'.$this->url[1].'/'.$this->url[2].'.json') as $k => $v) {
@@ -47,6 +48,7 @@
 					$resultado[$k] = $v;
 				}
 			}
+			$resultado['marca-default']   = URL . "disc/img/marca.png";
 			return $resultado;
 		}
 

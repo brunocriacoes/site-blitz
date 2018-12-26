@@ -3,7 +3,7 @@
 	$rss = simplexml_load_file($rss);
 ?>
 
-<img class="top_header" src="<?= URL ?>img/hader-produtos.jpg" width="100%"> <br><br>
+<img class="top_header" src="<?= URL ?>disc/img/hader-produtos.jpg" width="100%"> <br><br>
 
 <div class="container">
 	<div class="row">
@@ -23,9 +23,9 @@
 			<?php } ?>
 		</div>
 		<div class="col-md-3">
-			<img class="top_header" src="<?= URL ?>img/500x1000.jpg" width="100%">
+			<img class="top_header" src="<?= URL ?>disc/img/500x1000.jpg" width="100%">
 			<br><br>
-			<img class="top_header" src="<?= URL ?>img/500x500.jpg" width="100%">			
+			<img class="top_header" src="<?= URL ?>disc/img/500x500.jpg" width="100%">			
 		</div>
 	</div>
 </div>

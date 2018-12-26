@@ -1,4 +1,8 @@
 <?php 
+
+	session_start();
+	header('Content-Type: text/html; charset=UTF-8', true);
+
 	require 'functions.php'; 
 	require 'pages/header.php';
 
@@ -19,4 +23,3 @@
 	}
 
 	require 'pages/footer.php'; 
-?>

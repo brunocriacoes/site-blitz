@@ -1,7 +1,0 @@
-www.blitzbolsas.com.br
-
-ftp: 185.28.21.70
-Usuário: u739970139.blitz
-Senha: sw3vr2cjLm
-
-path: /new/

@@ -1,5 +1,5 @@
 	<?php if (empty($_POST)) { ?>
-	<img class="top_header" src="<?= URL ?>img/hader-produtos.jpg" width="100%"> <br><br>
+	<img class="top_header" src="<?= URL ?>disc/img/hader-produtos.jpg" width="100%"> <br><br>
 
 	<div class="container">
 		<div class="row">
@@ -42,8 +42,6 @@
 
 	<?php
 		@$paraMail  = EMAIL;
-		@$paraName  = 'Bruno';
-		@$assunto   = 'EMAIL SITE';
 		@$men      .= "<strong>Nome: </strong> ".$_POST['nome']."<br> \r\n";
 		@$men      .= "<strong>Email:</strong> ".$_POST['email']."<br> \r\n";
 		@$men      .= "<strong>Telefone: </strong> ".$_POST['telefone']."<br> \r\n";
@@ -51,7 +49,6 @@
 		@$remetenteNome = $_POST['nome'];
 		@$remetenteMail = $_POST['email'];
 		$FUNFOU = mail(EMAI, 'CONTATO SITE', $men);
-		 mail('br.rafael@outlook.com', 'CONTATO SITE', $men);
 		if($FUNFOU){
 			?>
 			<div class="container">
@@ -73,7 +70,6 @@
 			</div>
 			<?php
 		}
-		@file_put_contents('db/contatos/'.date('Y-m-d-').$_POST['email'].'-'.uniqid(), json_encode($_POST));
 	?>
 
 	<?php }	?>

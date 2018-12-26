@@ -62,9 +62,8 @@
 		</div>
 	</form>
 </div>
-<?php #var_dump($_SESSION['orcamento']['entry']); ?>
+<?php var_dump($_SESSION['orcamento']['entry']); ?>
 <?php }else{ ?>
-
 	<?php
 		@$headers  = 'MIME-Version: 1.0' . "\r\n";
 		@$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";

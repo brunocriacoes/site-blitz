@@ -4,7 +4,7 @@
 		@$prod->pasta = 'product/'.$url[1].'/';
 		@$prod->url   = $url;
 	?>
-	<img class="top_header" src="<?= URL ?>img/hader-produtos.png" width="100%"/>
+	<img class="top_header" src="<?= URL ?>disc/img/hader-produtos.png" width="100%"/>
 	<div class="container-fluid">
 		<div class="container">
 			<div class="row">

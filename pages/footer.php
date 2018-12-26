@@ -2,7 +2,7 @@
 	<div class="container-fluid news">
 		<div class="container">
 			<div class="col-md-4">
-			<object id="news" data="<?= URL ?>svg/close-envelope.svg" ></object>
+			<object id="news" data="<?= URL ?>disc/svg/close-envelope.svg" ></object>
 				<h5>NEWSLETTER</h5>
 				<p>Increva-se para participar de promoções</p>
 			</div>
@@ -22,7 +22,7 @@
 
 
 	<?php
-		$clientes = glob('clientes/*.jpg*');
+		$clientes = glob( __DIR__ . '/../disc/clientes/*.jpg*');
 		shuffle($clientes);
 		$clientes = array_chunk($clientes, 12);
 	?>
@@ -33,7 +33,8 @@
 		</div>
 		<div class="col-md-12">
 		<?php foreach ($clientes[0] as $key => $value) { ?>
-		<img src="<?= URL ?><?= $value ?>" width="8%" alt="">
+		<?php $value = explode('../', $value ); ?>
+		<img src="<?= URL ?><?= $value[1] ?>" width="8%" alt="">
 		<?php } ?>
 		</div>
 	</div>
@@ -58,9 +59,9 @@
 				</div>
 				<div class="col-md-4">
 					<address>
-						<object class="ico_footer" width="30" data="<?= URL ?>svg/close-envelope.svg" type="image/svg+xml"></object> <?= EMAIL ?> <br>
-						<object class="ico_footer" width="30" data="<?= URL ?>svg/phone-call.svg" type="image/svg+xml"></object> <?= PHONE ?> <br>
-						<object class="ico_footer" width="30" data="<?= URL ?>svg/location-pin.svg" type="image/svg+xml"></object> São Paulo - SP <br>
+						<object class="ico_footer" width="30" data="<?= URL ?>disc/svg/close-envelope.svg" type="image/svg+xml"></object> <?= EMAIL ?> <br>
+						<object class="ico_footer" width="30" data="<?= URL ?>disc/svg/phone-call.svg" type="image/svg+xml"></object> <?= PHONE ?> <br>
+						<object class="ico_footer" width="30" data="<?= URL ?>disc/svg/location-pin.svg" type="image/svg+xml"></object> São Paulo - SP <br>
 						<br><?php include 'pages/redes.php'; ?>	
 					</address>
 				</div>
@@ -79,11 +80,11 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
 
-	<script src="js/appml.js"></script>
-    <script src="<?= URL ?>js/jquery.min.js"></script>
-	<script src="<?= URL ?>js/bootstrap.min.js"></script>
-	<script src="<?= URL ?>js/jquery.cycle2.js"></script>
-	<script src="<?= URL ?>js/lightbox.min.js"></script>
-	<script src="<?= URL ?>js/functions.js"></script>
+	<script src="<?= URL ?>disc/js/appml.js"></script>
+    <script src="<?= URL ?>disc/js/jquery.min.js"></script>
+	<script src="<?= URL ?>disc/js/bootstrap.min.js"></script>
+	<script src="<?= URL ?>disc/js/jquery.cycle2.js"></script>
+	<script src="<?= URL ?>disc/js/lightbox.min.js"></script>
+	<script src="<?= URL ?>disc/js/functions.js"></script>
 </body>
 </html>

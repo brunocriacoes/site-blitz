@@ -1,7 +1,7 @@
 <div class="col-md-4">
 	<div class="prod">
 		<a href="prod_link">
-			<img class="marca" src="http://www.blitzbolsas.com.br/img/marca.png" />
+			<img class="marca" src="marca-default" />
 			<img src="foto" alt="foto" width="100%"/>
 		</a>
 		<span class="prod_title">id_prod</span>
