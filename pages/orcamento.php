@@ -1,4 +1,4 @@
-<img class="top_header" src="<?= URL ?>img/hader-produtos.jpg" width="100%"> <br><br>
+<img class="top_header" src="<?= URL ?>disc/img/hader-produtos.jpg" width="100%"> <br><br>
 
 <?php if (empty($_POST)) { ?>
 <div class="container">
@@ -19,7 +19,7 @@
 					<textarea name="" rows="5" data-save-cart="<?= @$key ?>@descricao" placeholder="Descrição" class="form-control"><?= @$_SESSION['orcamento']['entry'][$key]['descricao'] ?></textarea>
 				</div>
 				<div class="col-md-2">
-					<img class="trash" cart-dell="<?= $key ?>" src="<?= URL ?>img/delete.png" width="100%">
+					<img class="trash" cart-dell="<?= $key ?>" src="<?= URL ?>disc/img/delete.png" width="100%">
 				</div>
 			</div>
 		<?php } ?>
@@ -54,7 +54,7 @@
 			</div>
 			<div class="form-group">
 				<a href="<?= URL ?>produto/HO/" class="btn btn-danger">
-					<img src="<?= URL ?>img/shopping-bag.png">
+					<img src="<?= URL ?>disc/img/shopping-bag.png">
 					adicionar mais produtos
 				</a>
 				<input type="submit" value="enviar orçamento agora" class="btn btn-primary">
@@ -62,7 +62,6 @@
 		</div>
 	</form>
 </div>
-<?php var_dump($_SESSION['orcamento']['entry']); ?>
 <?php }else{ ?>
 	<?php
 		@$headers  = 'MIME-Version: 1.0' . "\r\n";
@@ -89,8 +88,6 @@
 		@$remetenteNome = $_POST['nome'];
 		@$remetenteMail = $_POST['email'];
 		$FUNFOU = mail(EMAI, 'CONTATO SITE', $men, $headers);
-		 // mail('br.rafael@outlook.com', 'CONTATO SITE', $men, $headers);
-		@file_put_contents('db/orcamentos/'.date('Y-m-d-').$_POST['email'].'-'.uniqid(), json_encode($_SESSION['orcamento']));
 		unset($_SESSION['orcamento']);
 		@$_SESSION['orcamento'] = '';
 		if($FUNFOU){
